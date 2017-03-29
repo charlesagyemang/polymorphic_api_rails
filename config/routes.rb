@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+    #post authentication
     post 'authenticate', to: 'authentication#authenticate'
     resources :people
     resources :posts
