@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#User.create!([{email: 'micnkru@mail.com' , password: '1234567' , password_confirmation: '1234567'}])
+#curl -H "Content-Type: application/json" -X POST -d '{"email":"micnkru@mail.com", "password": "1234567" , "password_confirmation": "1234567"}' http://localhost:3000/authenticate

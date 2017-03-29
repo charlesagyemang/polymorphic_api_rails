@@ -8,6 +8,7 @@ class ApplicationController < ActionController::API
     render json: JSON.pretty_generate(params.as_json)
   end
 
+  #Do this login in the front end
   def getPostsById (id)
     post_id = []
     posts = Post.all
@@ -19,7 +20,4 @@ class ApplicationController < ActionController::API
     post_id
   end
 
-  def hey
-    "hey"
-  end
 end
