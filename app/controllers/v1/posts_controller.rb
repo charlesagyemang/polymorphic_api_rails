@@ -18,10 +18,15 @@
 
     # POST /posts
     def create
-      @post = Post.new(post_params)
+
+      #@post = Post.new(post_params)
+      # @person = Person.find(params[:person_id])
+      # @post   = @person.posts.new(post_params)
 
       if @post.save
+        #render json: @post, status: :created, location: @post
         render json: @post, status: :created, location: @post
+
       else
         render json: @post.errors, status: :unprocessable_entity
       end

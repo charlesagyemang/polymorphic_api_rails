@@ -8,4 +8,18 @@ class ApplicationController < ActionController::API
     render json: JSON.pretty_generate(params.as_json)
   end
 
+  def getPostsById (id)
+    post_id = []
+    posts = Post.all
+    posts.each do |post|
+      if post.person_id == id
+        post_id.push(post)
+      end
+    end
+    post_id
+  end
+
+  def hey
+    "hey"
+  end
 end
